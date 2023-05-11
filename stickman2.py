@@ -46,3 +46,12 @@ while True:
         print('Could not find any more images')
         bot.moveTo(random.randint(100, 500), random.randint(100, 500), duration=move_time)
         time.sleep(move_time)
+
+    # check for keyboard input to stop/start the bot
+    if keyboard.is_pressed('q'):
+        print('Quitting...')
+        break
+    elif keyboard.is_pressed('w'):
+        print('Starting new search...')
+        last_detection_time = time.time() - time_to_wait  # trigger a new search immediately
+        time.sleep(2)  # wait a bit to avoid accidentally triggering another search
