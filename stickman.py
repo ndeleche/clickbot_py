@@ -12,7 +12,7 @@ images = {
     'blackfriday-4.png': 'Type 4'
 }
 
-time_to_wait = 300 # in seconds, i.e. 5 minutes
+time_to_wait = 600 # in seconds, i.e. 10 minutes
 last_detection_time = time.time() - time_to_wait # so it will trigger the first time
 
 while True:
@@ -38,4 +38,4 @@ while True:
             print('Could not find any more images')
             break
 
-    time.sleep(0.5)
+    time.sleep(5)
