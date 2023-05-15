@@ -12,7 +12,7 @@ images = {
     'blackfriday-4.png': 'Type 4'
 }
 
-time_to_wait = 300 # in seconds, i.e. 5 minutes
+time_to_wait = 150 # in seconds, i.e. 5 minutes
 last_detection_time = time.time() - time_to_wait # so it will trigger the first time
 
 while True:
