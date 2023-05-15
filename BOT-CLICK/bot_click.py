@@ -115,3 +115,4 @@ bot.mouseUp()
 
 # Wait for a moment before continuing
 time.sleep(2)
+
