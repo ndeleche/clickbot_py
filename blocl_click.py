@@ -129,6 +129,7 @@ def find_ads():
             center = (center_x, center_y)
             ad_name = ad_img.split('.')[0]
             ads.append((region, center, ad_name))
+            print(region, center, ad_name) #
     return ads
 
 def click_ad(center, ad_name):
@@ -175,5 +176,5 @@ while True:
                 # Randomize wait time before the next ad click
                 time.sleep(random.randint(ad_wait_time - 30, ad_wait_time + 30))
     else:
-        print('I cannot see any ads')
+        print('I cannot see any ad')
     time.sleep(0.5)
