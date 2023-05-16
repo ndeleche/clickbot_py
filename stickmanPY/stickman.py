@@ -7,7 +7,7 @@ import win32api, win32con
 
 time.sleep(2)
 while 1:
-    if bot.locateOnScreen('stickman.png', confidence= 0.8) != None:
+    if bot.locateOnScreen('blackfriday-1.png', confidence= 0.8) != None:
         print('I can see it')
         time.sleep(0.5)
     else:
