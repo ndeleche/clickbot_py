@@ -7,23 +7,35 @@ import random
 import time
 import os 
 
+
 def wait(seconds):
     time.sleep(seconds)
 
 def open_program(path):
-    os.startfile(path)
+    try:
+        os.startfile(path)
+    except OSError as e:
+        print(f"Error: {e}")
 
 def click_position(x, y, duration=2):
-    bot.moveTo(x, y, duration=duration)
-    bot.click()
+    try:
+        bot.moveTo(x, y, duration=duration)
+        bot.click()
+    except Exception as e:
+        print(f"Error: {e}")
 
 def double_click_position(x, y, duration=2):
-    bot.moveTo(x, y, duration=duration)
-    bot.doubleClick()
+    try:
+        bot.moveTo(x, y, duration=duration)
+        bot.doubleClick()
+    except Exception as e:
+        print(f"Error: {e}")
 
 def type_text(text, interval=0.1):
-    bot.write(text, interval=interval)
-
+    try:
+        bot.write(text, interval=interval)
+    except Exception as e:
+        print(f"Error: {e}")
 # Wait for 5 seconds to allow time for the user to switch to the desired window.
 wait(5)
 
@@ -129,7 +141,6 @@ def find_ads():
             center = (center_x, center_y)
             ad_name = ad_img.split('.')[0]
             ads.append((region, center, ad_name))
-            print(region, center, ad_name) #
     return ads
 
 def click_ad(center, ad_name):
