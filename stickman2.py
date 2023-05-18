@@ -112,6 +112,16 @@ bot.mouseUp()
 # Wait for a moment before continuing.
 wait(10)
 
+url = "http://127.0.0.1:8000/"
+def check_url(url):
+    try:
+        response = requests.get(url)
+        if response.status_code == 200:
+            print("URL is reachable and returns a 200 code")
+        else:
+            print(f"URL returned a {response.status_code} code")
+    except requests.exceptions.RequestException as e:
+        print("URL is not reachable:", e)
 
 def find_ads():
     """
@@ -141,13 +151,18 @@ def click_ad(center, ad_name):
         bot.click()
         time.sleep(2)
         print(f"Clicked ad: {ad_name}")
+        check_url(url)  # Request the URL after clicking the ad
+
         # Store the center position, region, and ad name in a file or database
         # You can modify this part to store the data as per your requirement
 
 # Wait for 2 seconds before starting
 time.sleep(2)
 
-# Wait for 1 minutes (60 seconds) between ad clicks
+# URL checking before detecting ads and clicking
+check_url(url)
+
+# Wait for 1 minute (60 seconds) between ad clicks
 ad_wait_time = 60
 
 # Track clicked ads
@@ -156,7 +171,7 @@ clicked_ads = set()
 while True:
     ads = find_ads()
     if ads:
-       #  print(f"I can see {len(ads)} ads")
+        # print(f"I can see {len(ads)} ads")
         for ad in ads:
             region, center, ad_name = ad
             if ad_name not in clicked_ads:
