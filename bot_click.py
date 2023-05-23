@@ -44,7 +44,7 @@ wait(8)
 double_click_position(1006, 282)
 
 wait(2)  
- 
+
 click_position(1123, 26)
 
 # Wait for 5 seconds to allow time for the page to load.
@@ -214,12 +214,12 @@ while True:
                 click_ad(center, ad_name)
                 clicked_ads.add(ad_name)
                 # Randomize movement after clicking an ad
-                move_distance = random.randint(100, 300)
+                move_distance = random.randint(200, 500)
                 move_direction = random.choice(['left', 'right', 'up', 'down'])
                 if move_direction == 'left':
                     bot.move(-move_distance, 0, duration=2)
                 elif move_direction == 'right':
-                     bot.move(move_distance, 0, duration=2)
+                    bot.move(move_distance, 0, duration=2)
                 elif move_direction == 'up':
                     bot.move(0, -move_distance, duration=2)
                 elif move_direction == 'down':
@@ -229,4 +229,3 @@ while True:
     else:
         # print('I cannot see any ad')
         time.sleep(0.5)
- 
