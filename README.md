@@ -1,12 +1,72 @@
+                                                         REQUIREMENT
+
+-Text editor 
+
+-python  3.11.1
+
+
+
+
+
 Python script that simulates a click bot. It uses the pyautogui library to automate mouse movements and clicks on the screen. Here's a breakdown of the script:
 
-NECESSARY MODULES:
+                                                       NECESSARY MODULES:
 
 -pyautogui for automation,
+
 -random for generating random values,
+
 -time for time-related functions,
+
 -os for operating system-related functions, and 
+
 -requests for sending HTTP requests.
+
+
+
+
+                                               HOW TO INSTALL THE REQUIRED MODULES:
+
+for the Python code to work, you can use the pip package manager, which is the standard package manager for Python. Here are the installation commands for each module:
+
+NOTE:
+you can install using your command prompt or terminal on your vscode if your using it or pycharm ect.
+
+
+1.PYAUTOGUI
+
+
+![pyuatogui (3)](https://github.com/ndeleche/clickbot_py/assets/80362168/43a6572b-2381-4051-8a6e-0f48c2177767)
+
+2.REQUESTS  
+
+
+![request](https://github.com/ndeleche/clickbot_py/assets/80362168/6e377a91-838e-42f4-a2c4-15f4dd36c0e8)
+
+
+3.OS, RANDOM, TIME 
+
+-Both modules are  part of Python's standard library and does not require a separate installation.
+
+
+
+                                                            FLOW CHART OF THE BOT 
+
+
+
+COMING SOON 
+
+EXPLANATION OF IT HOW IT WORKS 
+
+
+
+
+
+
+
+
+
+
 
 
 The script defines several functions for different actions, such as waiting for a specified duration, opening a program, clicking at a specific position, typing text, and pressing the Enter key.
@@ -50,3 +110,9 @@ If the URL is not reachable, it sleeps for 10 seconds before checking again.
 If ads are found, it clicks on each ad that hasn't been clicked before, waits for a random amount of time, and then performs a random movement.
 
 If no ads are found, it sleeps for a short duration before checking again.
+
+
+                                                       HOW TO RUN THE SCRIPT 
+
+
+click the Run Python File in Terminal play button in the top-right side of the editor(vscode)
