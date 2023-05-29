@@ -56,7 +56,7 @@ you can install using your command prompt or terminal on your vscode if your usi
 
 COMING SOON 
 
-EXPLANATION OF IT HOW IT WORKS 
+                                                          EXPLANATION OF IT HOW IT WORKS 
 
 
 
