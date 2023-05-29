@@ -1,6 +1,3 @@
-"""
-            CLICK-BOT
-"""
 # Import necessary modules
 import pyautogui as bot
 import random
@@ -28,60 +25,6 @@ def type_text(text, interval=0.1):
 
 def press_enter():
     bot.press('enter')
-    
-# Wait for 5 seconds to allow time for the user to switch to the desired window.
-wait(5)
-
-# Provide the correct path to the GitHub program.
-github_path = r'C:\Users\NDELECHE HAMIS\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\GitHub, Inc.\GitHub Desktop.lnk'
-
-# Open the GitHub program using the startfile function.
-open_program(github_path)
-
-# Wait for 8 seconds to allow time for the GitHub program to load.
-wait(8)
-
-# Open a repository by performing a double-click action at the specified location.
-double_click_position(1006, 282)
-
-wait(2)  
-
-click_position(1123, 26)
-
-# Wait for 5 seconds to allow time for the page to load.
-wait(5)
-
-# Open the terminal by performing a single-click action at the specified location.
-click_position(364, 13)
-
-# Wait for 4 seconds to allow time for the terminal to focus.
-wait(2)
-
-# Create a new tab in the terminal.
-click_position(398, 40)
-click_position(625, 60)
-
-# Wait for 5 seconds to allow time for the terminal to open.
-wait(5)
-
-# Activate the virtual environment by performing a single-click action at the specified location.
-click_position(1100, 130)
-
-# Wait for 5 seconds.
-wait(5)
-
-# Type the necessary commands in the terminal to start the Django server.
-type_text(r"myenv\Scripts\activate.bat")
-
-press_enter()
-
-wait(1)
-
-type_text('cd ecommerce\n')
-
-wait(1)
-
-type_text('py manage.py runserver\n')
 
 # Wait for  seconds.
 wait(5)
