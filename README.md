@@ -1,4 +1,4 @@
-                                                         REQUIREMENT
+                         REQUIREMENT
 
 -Text editor 
 
@@ -10,7 +10,7 @@
 
 Python script that simulates a click bot. It uses the pyautogui library to automate mouse movements and clicks on the screen. Here's a breakdown of the script:
 
-                                                       NECESSARY MODULES:
+                          NECESSARY MODULES:
 
 -pyautogui for automation,
 
@@ -25,7 +25,7 @@ Python script that simulates a click bot. It uses the pyautogui library to autom
 
 
 
-                                               HOW TO INSTALL THE REQUIRED MODULES:
+                           HOW TO INSTALL THE REQUIRED MODULES:
 
 for the Python code to work, you can use the pip package manager, which is the standard package manager for Python. Here are the installation commands for each module:
 
@@ -50,13 +50,13 @@ you can install using your command prompt or terminal on your vscode if your usi
 
 
 
-                                                            FLOW CHART OF THE BOT 
+                          FLOW CHART OF THE BOT 
 
 
 
 COMING SOON 
 
-                                                          EXPLANATION OF IT HOW IT WORKS 
+                          EXPLANATION OF IT HOW IT WORKS 
 
 
 
@@ -112,7 +112,7 @@ If ads are found, it clicks on each ad that hasn't been clicked before, waits fo
 If no ads are found, it sleeps for a short duration before checking again.
 
 
-                                                       HOW TO RUN THE SCRIPT 
+                              HOW TO RUN THE SCRIPT 
 
 
 click the Run Python File in Terminal play button in the top-right side of the editor(vscode)
