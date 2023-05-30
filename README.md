@@ -118,3 +118,11 @@ If no ads are found, it sleeps for a short duration before checking again.
 
 
 click the Run Python File in Terminal play button in the top-right side of the editor(vscode)
+
+
+POINT TO NOTE:
+
+
+-sometimes detecting the images or ads on the screen depends on the resolution of the images or ads when the websites runs locally on the machine or when the web is  hosted 
+
+so you have to take new screnshot and put them in the same folder of the bot script.
