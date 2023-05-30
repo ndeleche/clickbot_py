@@ -9,9 +9,6 @@ from threading import Thread
 def wait(seconds):
     time.sleep(seconds)
 
-def open_program(path):
-    os.startfile(path)
-
 def click_position(x, y, duration=2):
     bot.moveTo(x, y, duration=duration)
     bot.click()
@@ -25,15 +22,18 @@ def type_text(text, interval=0.1):
 
 def press_enter():
     bot.press('enter')
-
+     
+def refresh_page():
+    bot.press('F5')
+    
 # Wait for  seconds.
 wait(5)
 
-# Open the web browser by performing a single-click action at the specified location.
 click_position(129, 745)
 
 # Wait for 3 seconds and open Google Chrome.
 wait(3)
+
 type_text('chrome')
 
 # Click on the address bar.
@@ -51,17 +51,26 @@ wait(2)
 click_position(325, 57)
 
 # Type the URL of the local server and press Enter to access the website.
-type_text("http://127.0.0.1:8000/")
+type_text("http://iamndeleche.pythonanywhere.com/")
 
 wait(3)
 
 press_enter()
+
+wait(3)
+
+refresh_page()
+
+wait(3)
+
+refresh_page()
 
 # Wait for 10 seconds.
 wait(10)
 
 # Define the start and end points for dragging.
 start_point = (1355, 155)
+
 end_point = (1356, 370)
 
 # Move the cursor to the start point.
@@ -69,24 +78,26 @@ bot.moveTo(start_point, duration=1)
 
 # Perform the hold and drag action.
 bot.mouseDown()
+
 bot.dragTo(end_point, duration=2)
+
 bot.mouseUp()
 
 # Wait for a moment before continuing.
 wait(10)
 
-url = "http://127.0.0.1:8000/"
+url = "http://iamndeleche.pythonanywhere.com/"
 
 def check_url(url):
     try:
         response = requests.get(url)
         if response.status_code == 200:
-            print("URL is reachable and returns a 200 code")
+            print("server is reachable ")
             return True
         else:
             print(f"URL returned a {response.status_code} code")
     except requests.exceptions.RequestException as e:
-        print("URL is not reachable:", e)
+        print("server is not reachable:", e)
     return False
 
 def url_check_loop():
@@ -127,7 +138,8 @@ def click_ad(center, ad_name):
         bot.click()
         time.sleep(2)
         print(f"Clicked ad: {ad_name}")
-
+        print(f"Position: {center}")
+        
         # Request the URL after clicking the ad
         check_url(url)
 
@@ -137,16 +149,16 @@ def click_ad(center, ad_name):
 # Wait for 2 seconds before starting
 time.sleep(2)
 
-# Wait for 1 minute (60 seconds) between ad clicks
-ad_wait_time = 60
+# Wait for 15 seconds(30 seconds) between ad clicks
+ad_wait_time = 15
 
 # Track clicked ads
 clicked_ads = set()
 
 while True:
     if not check_url(url):
-        print("Sleeping until the URL is reachable...")
-        time.sleep(10)  # Sleep for 10 seconds before checking the URL again
+        print("Am sleeping until server is reachable...")
+        time.sleep(20)  # Sleep for 10 seconds before checking the URL again
         continue
     
     ads = find_ads()

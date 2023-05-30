@@ -1,95 +1,10 @@
-"""
-            CLICK-BOT
-"""
-# Import necessary modules
+import requests
+import time
 import pyautogui as bot
 import random
-import time
-import os 
-import requests
 from threading import Thread
 
-def wait(seconds):
-    time.sleep(seconds)
-
-def open_program(path):
-    os.startfile(path)
-
-def click_position(x, y, duration=2):
-    bot.moveTo(x, y, duration=duration)
-    bot.click()
-
-def double_click_position(x, y, duration=2):
-    bot.moveTo(x, y, duration=duration)
-    bot.doubleClick()
-
-def type_text(text, interval=0.1):
-    bot.write(text, interval=interval)
-
-def press_enter():
-    bot.press('enter')
-    
-def refresh_page():
-    bot.press('F5')
-    
-# Wait for 5 seconds to allow time for the user to switch to the desired window.
-wait(5)
-
-# Open the web browser by performing a single-click action at the specified location.
-click_position(129, 745)
-
-# Wait for 3 seconds and open Google Chrome.
-wait(3)
-type_text('chrome')
-
-# Click on the address bar.
-click_position(462, 361)
-
-# Wait for 4 seconds.
-wait(4)
-
-# Open a new tab.
-click_position(704, 453)
-
-# Wait for 2 seconds and click on the address bar.
-wait(2)
-
-click_position(325, 57)
-
-# Type the URL of the local server and press Enter to access the website.
-type_text("http://iamndeleche.pythonanywhere.com/")
-
-wait(3)
-
-press_enter()
-
-wait(3)
-refresh_page()
-
-wait(3)
-refresh_page()
-
-
-# Wait for 10 seconds.
-wait(10)
-
-
-# Define the start and end points for dragging.
-start_point = (1355, 155)
-end_point = (1356, 370)
-
-# Move the cursor to the start point.
-bot.moveTo(start_point, duration=1)
-
-# Perform the hold and drag action.
-bot.mouseDown()
-bot.dragTo(end_point, duration=2)
-bot.mouseUp()
-
-# Wait for a moment before continuing.
-wait(10)
-
-url = "http://iamndeleche.pythonanywhere.com/"
+url = "http://127.0.0.1:8000/"
 
 def check_url(url):
     try:
@@ -172,12 +87,12 @@ while True:
                 click_ad(center, ad_name)
                 clicked_ads.add(ad_name)
                 # Randomize movement after clicking an ad
-                move_distance = random.randint(200, 500)
+                move_distance = random.randint(100, 300)
                 move_direction = random.choice(['left', 'right', 'up', 'down'])
                 if move_direction == 'left':
                     bot.move(-move_distance, 0, duration=2)
                 elif move_direction == 'right':
-                    bot.move(move_distance, 0, duration=2)
+                     bot.move(move_distance, 0, duration=2)
                 elif move_direction == 'up':
                     bot.move(0, -move_distance, duration=2)
                 elif move_direction == 'down':
@@ -187,3 +102,4 @@ while True:
     else:
         # print('I cannot see any ad')
         time.sleep(0.5)
+ 
