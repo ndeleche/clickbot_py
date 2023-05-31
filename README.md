@@ -35,13 +35,15 @@ you can install using your command prompt or terminal on your vscode if your usi
 
 1.PYAUTOGUI
 
+![pyuatogui (3)](https://github.com/ndeleche/clickbot_py/assets/80362168/7fccd467-18e1-49bc-b3c4-19d1a6d59fe8)
 
-![pyuatogui (3)](https://github.com/ndeleche/clickbot_py/assets/80362168/43a6572b-2381-4051-8a6e-0f48c2177767)
+
 
 2.REQUESTS  
 
 
-![request](https://github.com/ndeleche/clickbot_py/assets/80362168/6e377a91-838e-42f4-a2c4-15f4dd36c0e8)
+![request](https://github.com/ndeleche/clickbot_py/assets/80362168/6db436ed-dd51-4bbb-88fb-ce4fbf78832a)
+
 
 
 3.OS, RANDOM, TIME 
@@ -116,3 +118,11 @@ If no ads are found, it sleeps for a short duration before checking again.
 
 
 click the Run Python File in Terminal play button in the top-right side of the editor(vscode)
+
+
+POINT TO NOTE:
+
+
+-sometimes detecting the images or ads on the screen depends on the resolution of the images or ads when the websites runs locally on the machine or when the web is  hosted 
+
+so you have to take new screnshot and put them in the same folder of the bot script.
