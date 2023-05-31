@@ -8,6 +8,13 @@ from threading import Thread
 
 def wait(seconds):
     time.sleep(seconds)
+    
+def open_chrome():
+    # Check the operating system to determine the appropriate command to open Chrome
+    if os.name == 'nt':  # For Windows
+        os.startfile('C:\Program Files\Google\Chrome\Application\chrome.exe')
+   # else:
+       # print("Unsupported operating system")
 
 def click_position(x, y, duration=2):
     bot.moveTo(x, y, duration=duration)
@@ -29,18 +36,10 @@ def refresh_page():
 # Wait for  seconds.
 wait(5)
 
-click_position(129, 745)
+open_chrome()
 
-# Wait for 3 seconds and open Google Chrome.
-wait(3)
-
-type_text('chrome')
-
-# Click on the address bar.
-click_position(462, 361)
-
-# Wait for 4 seconds.
-wait(4)
+# Wait for 2 seconds.
+wait(2)
 
 # Open a new tab.
 click_position(704, 453)
@@ -71,7 +70,7 @@ wait(10)
 # Define the start and end points for dragging.
 start_point = (1355, 155)
 
-end_point = (1356, 443)
+end_point = (1356, 529)
 
 # Move the cursor to the start point.
 bot.moveTo(start_point, duration=1)
