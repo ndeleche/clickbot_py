@@ -71,7 +71,7 @@ wait(10)
 # Define the start and end points for dragging.
 start_point = (1355, 155)
 
-end_point = (1356, 370)
+end_point = (1356, 443)
 
 # Move the cursor to the start point.
 bot.moveTo(start_point, duration=1)
