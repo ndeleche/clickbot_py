@@ -13,14 +13,14 @@ def open_chrome():
     # Check the operating system to determine the appropriate command to open Chrome
     if os.name == 'nt':  # For Windows
         os.startfile('C:\Program Files\Google\Chrome\Application\chrome.exe')
-   # else:
+  # else:
        # print("Unsupported operating system")
 
-def click_position(x, y, duration=2):
+def click_position(x, y, duration=0.5):
     bot.moveTo(x, y, duration=duration)
     bot.click()
 
-def double_click_position(x, y, duration=2):
+def double_click_position(x, y, duration=0.5):
     bot.moveTo(x, y, duration=duration)
     bot.doubleClick()
 
@@ -32,9 +32,9 @@ def press_enter():
      
 def refresh_page():
     bot.press('F5')
-    
+       
 # Wait for  seconds.
-wait(5)
+wait(2)
 
 open_chrome()
 
@@ -52,25 +52,17 @@ click_position(325, 57)
 # Type the URL of the local server and press Enter to access the website.
 type_text("http://iamndeleche.pythonanywhere.com/")
 
-wait(3)
+wait(2)
 
 press_enter()
 
-wait(3)
-
-refresh_page()
-
-wait(3)
-
-refresh_page()
-
 # Wait for 10 seconds.
-wait(10)
+wait(2)
 
 # Define the start and end points for dragging.
 start_point = (1355, 155)
 
-end_point = (1356, 529)
+end_point = (1357, 436)
 
 # Move the cursor to the start point.
 bot.moveTo(start_point, duration=1)
@@ -83,7 +75,7 @@ bot.dragTo(end_point, duration=2)
 bot.mouseUp()
 
 # Wait for a moment before continuing.
-wait(10)
+wait(2)
 
 url = "http://iamndeleche.pythonanywhere.com/"
 
@@ -103,7 +95,7 @@ def url_check_loop():
     while True:
         if check_url(url):
             break
-        time.sleep(10)  # Wait for 10 seconds before the next URL check
+        time.sleep(15)  # Wait for 10 seconds before the next URL check
 
 # Create and start the URL check thread
 url_check_thread = Thread(target=url_check_loop)
@@ -149,7 +141,7 @@ def click_ad(center, ad_name):
 time.sleep(2)
 
 # Wait for 15 seconds(30 seconds) between ad clicks
-ad_wait_time = 15
+ad_wait_time = 5
 
 # Track clicked ads
 clicked_ads = set()
@@ -157,7 +149,7 @@ clicked_ads = set()
 while True:
     if not check_url(url):
         print("Am sleeping until server is reachable...")
-        time.sleep(20)  # Sleep for 10 seconds before checking the URL again
+        time.sleep(10)  # Sleep for 10 seconds before checking the URL again
         continue
     
     ads = find_ads()
